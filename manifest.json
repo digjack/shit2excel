@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "商品信息导出",
+    "version": "1.0",
+    "description": "将页面上的商品信息导出为Excel文件。",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
